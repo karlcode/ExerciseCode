@@ -1,0 +1,104 @@
+html(style="margin: 0; padding: 0")
+    head
+        <title>Project for Angela</title>
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <!-- Materialize -->
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js")
+
+        <!- General -->
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600")
+        link(rel="stylesheet" href="css/style.css")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.5/Chart.min.js")
+       
+
+       
+            
+    body
+            .row
+                .col.s12.m12.l5.offset-l1(style="border-top: 10px solid #00AEAD;")
+                    h3 <b>Participation Number + Rate</b>
+                    <canvas id="myChart" width="320" height="200"></canvas>
+                .col.s12.m12.l5(style="border-top: 10px solid #3C399D;")
+                    h3 <b>Amount Donated</b> (totals + average)
+                    <canvas id="mid" width="320" height="200"></canvas>
+            .row
+                .col.s12.m12.l5.offset-l1(style="border-top: 10px solid #F50083;")
+                    h3 <b>Top Centres by Participation Rate </b>
+                    <canvas id="myChart2" width="320" height="200"></canvas>
+            
+                .col.s12.m12.l5(style="border-top: 10px solid #57549E;")
+                    h3 <b>Top Charities - YTD</b>
+                    table#charities
+                        tr
+                            th(style="background-color: #57549E; color: white;") Number of Donors
+                            th(style="background-color: #878BC5; color: white;") Number of Donors
+                        tr
+                            td The Salvation Army Austr..
+                            td Oxfam Australia
+                        tr
+                            td Heart Foundation Australia
+                            td Reach Out Australia
+                        tr
+                            td Lifeline Australia
+                            td WWF Australia
+                        tr
+                            td RedKite
+                            td Opportunity International...
+                        tr
+                            td Oxfam Australia
+                            td The Smith Family
+            .row
+                .col.s12.m12.l5.offset-l1(style="border-top: 10px solid #5FA7DC;")
+
+                    h3 <b>Top One-Off Appeals - YTD</b>
+                        
+                    table
+                        tr
+                            th(style="background-color: #599CCE; color: white;") Name
+                            th(style="background-color: #478BC3; color: white;") Total Raised
+                            th(style="background-color: #599CCE; color: white;") No. of Donors
+                        tr
+                            td(style="font-weight: 600;") Walk in her shoes 2016
+                            td $25,534.00
+                            td 8,348
+                        tr
+                            td(style="font-weight: 600;") Sending Starlight to Ali...
+                            td $12,824.00
+                            td 4,752
+                        tr
+                            td(style="font-weight: 600;") Movember
+                            td $10,339.00
+                            td 3,914
+                        tr
+                            td(style="font-weight: 600;") Oxfam Trailwalker 2016
+                            td $8,532.00
+                            td 2,947
+                        tr
+                            td(style="font-weight: 600;") Waroona and District Fi...
+                            td $5,236.00
+                            td 1,393
+                .col.s12.m12.l5(style="border-top: 10px solid #00AEAD;")
+                    h3 <b>Top Charity Themes - YTD  </b>
+                    #flex
+                        <canvas id="pie" width="320" height="335"></canvas>
+                        // <div id="chartjs_legend"></div> 
+                            
+                    
+                <script>Chart.defaults.global.defaultFontSize = 22;</script>
+                <script>Chart.defaults.global.defaultFontFamily = 'Calibri';</script>
+                script( type="text/javascript" src="js/left.js") 
+                script( type="text/javascript" src="js/mid.js")
+                script( type="text/javascript" src="js/right.js")
+                script( type="text/javascript" src="js/pie.js")
+            
+
+
+
+
+
+
